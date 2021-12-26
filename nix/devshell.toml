@@ -1,0 +1,6 @@
+[[commands]]
+package = "alejandra"
+category = "linters"
+
+[[commands]]
+package = "nixFlakes"
