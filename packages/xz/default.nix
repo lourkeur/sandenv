@@ -4,7 +4,7 @@
 }:
 inputs.self.lib.mkDerivation {
   system = "x86_64-linux";
-  inherit (pkgs.gzip) pname version;
+  inherit (pkgs.xz) pname version;
   builder = "/bin/sh";
   args = [./builder.sh];
   env = {
@@ -14,11 +14,11 @@ inputs.self.lib.mkDerivation {
       "gawk"
       "gcc" # FIXME: use a minimalistic compiler
       "gnumake"
-      "xz"
+      "bzip2"
       "sbase"
       "bintools"
     ];
-    inherit (pkgs.gzip) src;
+    inherit (pkgs.xz) src;
   };
 
   contentAddressed = false; #temp

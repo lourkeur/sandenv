@@ -31,6 +31,7 @@
         stage0 = {
           inherit
             (channels.nixpkgs)
+            bzip2
             dash
             gawk
             gcc
@@ -38,7 +39,7 @@
             gnumake
             gnused
             gzip
-            lzma
+            xz
             ;
           inherit (channels.nixpkgs.nur.repos.sikmir) sbase;
           bintools = channels.nixpkgs.bintools-unwrapped;
@@ -48,6 +49,7 @@
         in {
           sbase = import packages/sbase {inherit pkgs inputs;};
           gzip = import packages/gzip {inherit pkgs inputs;};
+          xz = import packages/xz {inherit pkgs inputs;};
           dash = import packages/dash {inherit pkgs inputs;};
         };
         stage1 = step stage0;
