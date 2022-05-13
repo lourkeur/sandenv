@@ -18,6 +18,4 @@ inputs.self.lib.mkDerivation {
     ];
     inherit (pkgs.dash) src;
   };
-
-  contentAddressed = false; #temp
 }

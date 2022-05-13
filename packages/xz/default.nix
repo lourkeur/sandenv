@@ -20,6 +20,4 @@ inputs.self.lib.mkDerivation {
     ];
     inherit (pkgs.xz) src;
   };
-
-  contentAddressed = false; #temp
 }

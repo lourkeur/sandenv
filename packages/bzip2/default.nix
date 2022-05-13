@@ -19,6 +19,4 @@ inputs.self.lib.mkDerivation {
     ];
     inherit (pkgs.bzip2) src;
   };
-
-  contentAddressed = false; #temp
 }

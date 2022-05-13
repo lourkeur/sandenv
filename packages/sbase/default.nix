@@ -19,6 +19,4 @@ inputs.self.lib.mkDerivation {
       + ":/bin";
     inherit (pkgs.sbase) src;
   };
-
-  contentAddressed = false; #temp
 }
