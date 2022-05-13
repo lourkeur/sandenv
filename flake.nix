@@ -36,7 +36,9 @@
             gcc
             gnugrep
             gnumake
+            gnused
             gzip
+            lzma
             ;
           inherit (channels.nixpkgs.nur.repos.sikmir) sbase;
           bintools = channels.nixpkgs.bintools-unwrapped;
@@ -45,6 +47,7 @@
           pkgs = stage0 // prev;
         in {
           sbase = import packages/sbase {inherit pkgs inputs;};
+          gzip = import packages/gzip {inherit pkgs inputs;};
           dash = import packages/dash {inherit pkgs inputs;};
         };
         stage1 = step stage0;
