@@ -46,13 +46,13 @@
         };
         step = prev: let
           pkgs = stage0 // prev;
-        in {
-          sbase = import packages/sbase {inherit pkgs inputs;};
-          bzip2 = import packages/bzip2 {inherit pkgs inputs;};
-          gzip = import packages/gzip {inherit pkgs inputs;};
-          xz = import packages/xz {inherit pkgs inputs;};
-          dash = import packages/dash {inherit pkgs inputs;};
-        };
+        in inputs.nixpkgs.lib.genAttrs [
+          "bzip2"
+          "dash"
+          "gzip"
+          "sbase"
+          "xz"
+        ] (pkg: import packages/${pkg} {inherit pkgs inputs;});
         stage1 = step stage0;
         stage2 = step stage1;
       in {
