@@ -48,6 +48,7 @@
           pkgs = stage0 // prev;
         in {
           sbase = import packages/sbase {inherit pkgs inputs;};
+          bzip2 = import packages/bzip2 {inherit pkgs inputs;};
           gzip = import packages/gzip {inherit pkgs inputs;};
           xz = import packages/xz {inherit pkgs inputs;};
           dash = import packages/dash {inherit pkgs inputs;};
