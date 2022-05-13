@@ -64,7 +64,7 @@
           // {
             default = channels.nixpkgs.buildEnv {
               name = "sandenv-core";
-              paths = builtins.attrValues stage2;
+              paths = nixpkgs.lib.attrVals [ "dash" "sbase" ] stage2;
             };
           };
       };
