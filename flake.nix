@@ -49,6 +49,7 @@
         in inputs.nixpkgs.lib.genAttrs [
           "bzip2"
           "dash"
+          "gnugrep"
           "gnumake"
           "gzip"
           "sbase"
