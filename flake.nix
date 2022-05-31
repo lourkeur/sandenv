@@ -51,6 +51,7 @@
           "dash"
           "gnugrep"
           "gnumake"
+          "gnused"
           "gzip"
           "sbase"
           "xz"
